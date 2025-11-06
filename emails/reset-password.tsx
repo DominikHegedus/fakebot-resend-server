@@ -13,11 +13,11 @@ import Navigation from "./shared/button";
 
 export interface ResetPasswordProps {
   name: string;
-  resetPasswordUrl: string;
+  redirectUrl: string;
   token?: string;
 }
 
-export function ResetPassword({ name, resetPasswordUrl }: ResetPasswordProps) {
+export function ResetPassword({ name, redirectUrl }: ResetPasswordProps) {
   return (
     <StyleContainer>
       <Container>
@@ -26,7 +26,7 @@ export function ResetPassword({ name, resetPasswordUrl }: ResetPasswordProps) {
           We've received a request to reset your password. Please click the
           button below to reset your password:
         </Text>
-        <Navigation href={resetPasswordUrl ?? ""}>Reset Password</Navigation>
+        <Navigation href={redirectUrl ?? ""}>Reset Password</Navigation>
         <Text>
           If you didn't request this password reset, please ignore this email.
         </Text>

@@ -32,7 +32,7 @@ const server = Bun.serve({
     },
     "/api/v1/send-reset-password-email": {
       POST: async (req) => {
-        const { email, name, resetPasswordUrl } =
+        const { email, name, redirectUrl } =
           await getProps<ResetPasswordProps>(req);
 
         return await sendEmail({
@@ -40,7 +40,7 @@ const server = Bun.serve({
           subject: "Reset your password",
           react: ResetPassword({
             name: name,
-            resetPasswordUrl: resetPasswordUrl,
+            redirectUrl: redirectUrl,
           }),
         });
       },
