@@ -15,7 +15,7 @@ const server = Bun.serve({
   port: process.env.PORT ? Number(process.env.PORT) : 3000,
   hostname: "0.0.0.0",
   routes: {
-    "api/v1/send-verification-email": {
+    "/api/v1/send-verification-email": {
       POST: async (req) => {
         const { email, name, redirectUrl } =
           await getProps<EmailVerificationProps>(req);
@@ -30,7 +30,7 @@ const server = Bun.serve({
         });
       },
     },
-    "api/v1/send-reset-password-email": {
+    "/api/v1/send-reset-password-email": {
       POST: async (req) => {
         const { email, name, resetPasswordUrl } =
           await getProps<ResetPasswordProps>(req);
