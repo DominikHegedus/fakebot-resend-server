@@ -17,11 +17,11 @@ const server = Bun.serve({
   routes: {
     "/api/v1/send-verification-email": {
       POST: async (req) => {
-        const { email, name, redirectUrl } =
+        const { to, name, redirectUrl } =
           await getProps<EmailVerificationProps>(req);
 
         return await sendEmail({
-          to: email,
+          to: to,
           subject: "Verify your email to start using FakeBot!",
           react: EmailVerification({
             name: name,
@@ -32,11 +32,11 @@ const server = Bun.serve({
     },
     "/api/v1/send-reset-password-email": {
       POST: async (req) => {
-        const { email, name, redirectUrl } =
+        const { to, name, redirectUrl } =
           await getProps<ResetPasswordProps>(req);
 
         return await sendEmail({
-          to: email,
+          to: to,
           subject: "Reset your password",
           react: ResetPassword({
             name: name,
