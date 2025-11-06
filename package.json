@@ -4,14 +4,17 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "email build",
-    "dev": "email dev",
-    "export": "email export"
+    "build": "bunx email build",
+    "dev": "bunx email dev",
+    "export": "bunx email export"
   },
   "devDependencies": {
     "@react-email/preview-server": "4.3.2",
     "@types/bun": "latest",
     "react-email": "4.3.2"
+  },
+  "engines": {
+    "node": ">=20.12.0"
   },
   "peerDependencies": {
     "typescript": "^5"
