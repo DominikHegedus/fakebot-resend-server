@@ -4,7 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "email dev"
+    "build": "email build",
+    "dev": "email dev",
+    "export": "email export"
   },
   "devDependencies": {
     "@react-email/preview-server": "4.3.2",
@@ -16,6 +18,7 @@
   },
   "dependencies": {
     "@react-email/components": "0.5.7",
+    "@react-email/tailwind": "1.2.2",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "resend": "^6.4.1"
