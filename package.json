@@ -1,21 +1,22 @@
 {
-  "name": "resend-node-starter",
-  "version": "1.0.0",
-  "description": "A minimal Node.js web application for sending emails with Resend.",
-  "main": "index.ts",
-  "author": "resend",
+  "name": "fakebot-resend-server",
+  "module": "index.ts",
   "type": "module",
-  "license": "MIT",
-  "engines": {
-    "node": ">=22.18.0"
-  },
+  "private": true,
   "scripts": {
-    "dev": "node index.ts"
-  },
-  "dependencies": {
-    "resend": "latest"
+    "dev": "email dev"
   },
   "devDependencies": {
-    "@types/node": "latest"
+    "@types/bun": "latest",
+    "react-email": "4.3.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@react-email/components": "0.5.7",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "resend": "^6.4.1"
   }
 }

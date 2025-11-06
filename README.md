@@ -1,20 +1,15 @@
-# Resend
+# fakebot-resend-server
 
-This sample app demonstrates how to use Resend with [Node.js](https://nodejs.org).
+To install dependencies:
 
-## Prerequisites
+```bash
+bun install
+```
 
-To get the most out of this guide, you’ll need to:
+To run:
 
-* [Create an API key](https://resend.com/api-keys)
-* [Verify your domain](https://resend.com/domains)
+```bash
+bun run index.ts
+```
 
-## Instructions
-
-For a step-by-step guide to deploying on [Railway](https://railway.com?referralCode=resend), see [Send with Railway](https://resend.com/docs/send-with-railway), or click the button below.
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/resend?referralCode=resend)
-
-## License
-
-MIT License
+This project was created using `bun init` in bun v1.2.23. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
